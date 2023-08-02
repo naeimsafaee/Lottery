@@ -1,0 +1,110 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        style.
+            @font-face {
+                font-family: 'sf-pro-rounded-regular';
+                src: url(./sf-pro-rounded-regular.ttf) format('truetype');
+                font-style: normal;
+                font-weight: normal;
+            }
+
+            @font-face {
+                font-family: 'sf-pro-rounded-bold';
+                src: url(./sf-pro-rounded-bold.ttf) format('truetype');
+                font-style: normal;
+                font-weight: normal;
+            }
+
+            .mainEmailBox{
+                max-width: 800px;
+                text-align: center;
+                font-family: 'sf-pro-rounded-regular', sans-serif;
+                margin: auto;
+            }
+
+            .emailImageBox{
+                margin-bottom: 80px;
+            }
+
+            .emailImageText{
+                font-size: 25px;
+            }
+
+            .emailMainText{
+                margin-bottom: 40px;
+            }
+
+            .emailCodeSend{
+                font-family: 'sf-pro-rounded-bold', sans-serif;
+                color: #b92f28;
+                font-size: 25px;
+                margin: 30px 0;
+            }
+
+            .emailCodeMainBox{
+                margin-bottom: 100px;
+            }
+
+            .bottomTextEmailBox{
+                margin-bottom: 30px;
+            }
+
+            .BTE-text{
+                font-family: 'sf-pro-rounded-bold', sans-serif;
+            }
+
+            .BTE-link{
+                color: #DC3636;
+                text-decoration: none;
+            }
+
+            .footer{
+                background-color: #b92f28;
+                color: #fff;
+                padding-top: 30px;
+            }
+
+            .footerImageBox img{
+                width: 70px;
+            }
+
+            .footerText{
+                padding: 0 20px;
+                margin: 20px 0;
+            }
+
+            .footerCopyright{
+                font-family: 'sf-pro-rounded-bold', sans-serif;
+                background-color: #DC3636;
+                padding: 15px 0;
+            }
+        title Email
+    body
+        .mainEmailBox
+            .emailImageBox
+                img(src=app_url + 'headerLogo.png' alt='Logo')
+                .emailImageText XBIT LOTTO
+            .emailMainText
+                | In order to complete your registration at Xbit Lottery and be eligible to take part in this world class lottery, you need to confirm your email address.
+                .emailMainText
+                | To confirm your email, please copy code below:
+            .emailCodeMainBox
+                .emailCodeText  Your personal registration code :
+                .emailCodeSend
+                    span= code
+                .emailCodeNote
+                    | important : The code displayed is valid for 30 minutes
+            .bottomTextEmailBox
+                .BTE-text Thank you,
+                a.BTE-link(href='#')
+                    | Xbit Lottery
+            .footer
+                .footerImageBox
+                    img(src=app_url + 'footerLogo.png' alt='Logo')
+                    .emailImageText Xbit Lottery
+                .footerCopyright
+                    | Alright reserve for Xbit
